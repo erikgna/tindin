@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Museo;
+    src: url(/src/assets/fonts/Museo300-Regular.otf) format("opentype");
+}
+
+:root{
+    --purple: #e6007e;
+    --purple-hover: #e6007e9c;
+    
+    --green: #bada55;
+}
+
+*{
+    font-family: 'Museo', sans-serif;
+    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}

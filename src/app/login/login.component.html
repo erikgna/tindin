@@ -1,3 +1,25 @@
-<div>
-  <h1>Hello World</h1>
-</div>
+<section class="container">
+  <form class="form-field" (ngSubmit)="signUp()">
+    <div class="logo-section">
+      <div class="logo-field">
+        <h1>O</h1>
+        <h3>Tindin Quizzes</h3>
+      </div>
+      <p>Entre para visualizar e criar quizzes!</p>
+    </div>
+
+    <div class="input-field">
+      <label for="email">Email</label>
+      <input placeholder="Digite seu email" type="text" id="email" name="email" [(ngModel)]="emailControl">
+    </div>
+  
+    <div class="input-field">
+      <label for="password">Senha</label>
+      <input placeholder="Digite sua senha" type="text" id="password" name="password" [(ngModel)]="passwordControl">
+    </div>
+
+    <div class="button-field">
+      <button type="submit">Entrar</button>
+    </div>
+  </form>
+</section>
