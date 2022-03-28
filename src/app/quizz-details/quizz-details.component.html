@@ -1,0 +1,36 @@
+<section class="quizz-detail-field">
+  <div class="detail-card">
+    <h2>Detalhes do Quizz</h2>
+    <div class="detail-line">
+      <strong>Título: </strong>
+      <p>{{title}}</p>
+    </div>
+    <div class="detail-line">
+      <strong>Descrição: </strong>
+      <p>{{description}}</p>
+    </div>
+
+    <div class="detail-line">
+      <strong>Tipo: </strong>
+      <p>{{type}}</p>
+    </div>
+    <div class="detail-line">
+      <strong>Nível: </strong>
+      <p>{{level}}</p>
+    </div>
+    <div class="detail-options">
+      <strong>Opções</strong>
+      <p *ngFor="let option of options">
+        {{option.text}} - {{option.correct}}
+      </p>
+    </div>
+    <div class="detail-line">
+      <strong>Respostas totais: </strong>
+      <p>{{totalResponses}}</p>
+    </div>
+    <div class="detail-line">
+      <strong>Total Corretas: </strong>
+      <p>{{totalCorrects}}</p>
+    </div>
+  </div>
+</section>

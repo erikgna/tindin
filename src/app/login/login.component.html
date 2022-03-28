@@ -1,5 +1,5 @@
 <section class="container">
-  <form class="form-field" (ngSubmit)="signUp()">
+  <form class="form-field" (ngSubmit)="login()">
     <div class="logo-section">
       <div class="logo-field">
         <h1>O</h1>
@@ -10,13 +10,29 @@
 
     <div class="input-field">
       <label for="email">Email</label>
-      <input placeholder="Digite seu email" type="text" id="email" name="email" [(ngModel)]="emailControl">
+      <input
+        placeholder="Digite seu email"
+        type="text"
+        id="email"
+        name="email"
+        [(ngModel)]="email"
+        required
+      >
     </div>
-  
+
     <div class="input-field">
       <label for="password">Senha</label>
-      <input placeholder="Digite sua senha" type="text" id="password" name="password" [(ngModel)]="passwordControl">
+      <input
+        placeholder="Digite sua senha"
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+      >
     </div>
+
+    <small>{{errorMessage}}</small>
 
     <div class="button-field">
       <button type="submit">Entrar</button>

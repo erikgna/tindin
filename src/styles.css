@@ -1,18 +1,14 @@
-@font-face {
-    font-family: Museo;
-    src: url(/src/assets/fonts/Museo300-Regular.otf) format("opentype");
-}
-
 :root{
     --purple: #e6007e;
     --purple-hover: #e6007e9c;
-    
+
     --green: #bada55;
+    --green-hover: #bbda5579;
 }
 
 *{
     font-family: 'Museo', sans-serif;
-    
+
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;

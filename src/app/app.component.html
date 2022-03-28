@@ -1,2 +1,17 @@
-<!-- <app-login></app-login> -->
-<app-quizzes-list></app-quizzes-list>
+<header>
+  <nav *ngIf="token != ''; else emptyToken">
+    <a routerLink="quizzes" class="add-button">Ver Quizzes</a>
+    <div class="add-button" routerLink="new-quizz">
+      <mat-icon>library_add</mat-icon>
+      <p>Novo Quizz</p>
+    </div>
+  </nav>
+
+  <ng-template #emptyToken>
+    <div></div>
+  </ng-template>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

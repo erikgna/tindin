@@ -1,107 +1,35 @@
 <section class="quizzes">
-    <div class="quizz-card">
-        <h2>Acerte a conta</h2>
-        <p>Quanto é dois mais dois?</p>
-        
-        <div class="level-field">
-            <mat-icon>trending_up</mat-icon>
-            <strong>EASY</strong>
-            <p>10 XP</p>
-        </div>
+  <div class="quizzes-section" *ngIf="quizzes != undefined; else emptyArray">:
 
-        <div class="type-field">
-            <mat-icon>list_alt</mat-icon>
-            <p>MULTIPLE_CHOICE_ONE</p>
-        </div>
+    <div class="quizz-card" *ngFor="let quizz of quizzes">
+      <h2>{{quizz.title}}</h2>
+      <p>{{quizz.description}}</p>
 
-        <!-- <div>
-            <mat-icon>question_answer</mat-icon>
-            <strong>Opções</strong>
-        </div>
+      <div class="level-field">
+          <mat-icon>trending_up</mat-icon>
+          <strong>{{quizz.level}}</strong>
+          <p>{{quizz.rewardXp  || '0'}} XP</p>
+      </div>
 
-        <div>
-            <p>é 4</p>
-            <p>é 6</p>
-        </div> -->
+      <div class="type-field">
+          <mat-icon>list_alt</mat-icon>
+          <p>{{quizz.type}}</p>
+      </div>
+
+      <div class="icons-field">
+        <mat-icon (click)="navigateWithId(quizz._id || '', 'quizz-details')" class="icon">remove_red_eye</mat-icon>
+        <mat-icon (click)="navigateWithId(quizz._id || '', 'new-quizz')" class="icon">edit</mat-icon>
+        <mat-icon (click)="deleteQuizz(quizz._id || '')" class="icon">delete</mat-icon>
+      </div>
+
     </div>
+  </div>
 
-    <div class="quizz-card">
-        <h2>Acerte a conta</h2>
-        <p>Quanto é dois mais dois?</p>
-        
-        <div class="level-field">
-            <mat-icon>trending_up</mat-icon>
-            <strong>EASY</strong>
-            <p>10 XP</p>
-        </div>
-
-        <div class="type-field">
-            <mat-icon>list_alt</mat-icon>
-            <p>MULTIPLE_CHOICE_ONE</p>
-        </div>
+  <ng-template #emptyArray>
+    <div class="empty-msg">
+      <h1>Nenhum Quizz criado.</h1>
+      <button routerLink="new-quizz">Criar novo Quizz</button>
     </div>
+  </ng-template>
 
-    <div class="quizz-card">
-        <h2>Acerte a conta</h2>
-        <p>Quanto é dois mais dois?</p>
-        
-        <div class="level-field">
-            <mat-icon>trending_up</mat-icon>
-            <strong>EASY</strong>
-            <p>10 XP</p>
-        </div>
-
-        <div class="type-field">
-            <mat-icon>list_alt</mat-icon>
-            <p>MULTIPLE_CHOICE_ONE</p>
-        </div>
-    </div>
-
-    <div class="quizz-card">
-        <h2>Acerte a conta</h2>
-        <p>Quanto é dois mais dois?</p>
-        
-        <div class="level-field">
-            <mat-icon>trending_up</mat-icon>
-            <strong>EASY</strong>
-            <p>10 XP</p>
-        </div>
-
-        <div class="type-field">
-            <mat-icon>list_alt</mat-icon>
-            <p>MULTIPLE_CHOICE_ONE</p>
-        </div>
-    </div>
-
-    <div class="quizz-card">
-        <h2>Acerte a conta</h2>
-        <p>Quanto é dois mais dois?</p>
-        
-        <div class="level-field">
-            <mat-icon>trending_up</mat-icon>
-            <strong>EASY</strong>
-            <p>10 XP</p>
-        </div>
-
-        <div class="type-field">
-            <mat-icon>list_alt</mat-icon>
-            <p>MULTIPLE_CHOICE_ONE</p>
-        </div>
-    </div>
-
-    <div class="quizz-card">
-        <h2>Acerte a conta</h2>
-        <p>Quanto é dois mais dois?</p>
-        
-        <div class="level-field">
-            <mat-icon>trending_up</mat-icon>
-            <strong>EASY</strong>
-            <p>10 XP</p>
-        </div>
-
-        <div class="type-field">
-            <mat-icon>list_alt</mat-icon>
-            <p>MULTIPLE_CHOICE_ONE</p>
-        </div>
-    </div>
 </section>

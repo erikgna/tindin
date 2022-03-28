@@ -1,0 +1,36 @@
+nav{
+  padding: 0px 24px;
+  height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-button{
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  background: var(--green);
+  color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+
+  border-radius: 6px;
+  padding: 16px;
+
+  cursor: pointer;
+}
+
+.add-button p{
+  padding-left: 8px;
+}
+
+nav a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+
+  text-decoration: none;
+}

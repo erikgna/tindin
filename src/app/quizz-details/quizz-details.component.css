@@ -1,0 +1,46 @@
+.quizz-detail-field{
+  min-height: calc(100vh - 100px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--purple);
+}
+
+.detail-card{
+  max-width: 375px;
+
+  background: #fff;
+
+  border-radius: 6px;
+  padding: 32px 24px;
+
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.detail-card h2{
+  padding-bottom: 16px;
+}
+
+.detail-line{
+  display: flex;
+  align-items: center;
+
+  padding: 8px 0px;
+}
+
+.detail-line strong{
+  padding-right: 8px;
+}
+
+.detail-options{
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 8px;
+}
+
+.detail-options p{
+  padding-top: 8px;
+}

@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://h-api-ava.tindin.com.br",
+    "secure": false
+  }
+}
