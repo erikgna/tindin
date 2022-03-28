@@ -16,6 +16,10 @@ export class LoginComponent{
 
     constructor(private router: Router, private authService: AuthenticationService){}
 
+    ngOnInit(){
+      if(this.authService.getToken() != '') this.router.navigateByUrl('quizzes')
+    }
+
     login() {
       if(this.email == '' || this.password == '') this.errorMessage = "Por favor, preencha os campos."
 

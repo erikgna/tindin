@@ -1,5 +1,4 @@
 .quizzes{
-    min-width: 100vw;
     min-height: calc(100vh - 100px);
 
     background: var(--purple);
